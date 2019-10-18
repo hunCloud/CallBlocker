@@ -1,7 +1,7 @@
 package hungnn.bognmaiit.callblocker.layout;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
+
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -19,11 +19,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
-
 import hungnn.bognmaiit.callblocker.R;
 import hungnn.bognmaiit.callblocker.activity.ConfigurationActivity;
 import hungnn.bognmaiit.callblocker.blockednumber.BlockedNumber;
 import hungnn.bognmaiit.callblocker.blockednumber.BlockedNumberType;
+
 
 public class AddNumberDialogFragment extends DialogFragment implements OnItemSelectedListener {
     private final String LOG_TAG = AddNumberDialogFragment.class.getSimpleName();
@@ -53,21 +53,21 @@ public class AddNumberDialogFragment extends DialogFragment implements OnItemSel
         countryList.setOnItemSelectedListener(this);
 
         builder.setView(dialogView)
-            .setPositiveButton("Add", (dialog, id) -> {
-                String countryCode = countryCodeView.getText().toString();
-                String phoneNumber = numberView.getText().toString();
-                BlockedNumberType type = (BlockedNumberType) args.getSerializable(DIALOG_TYPE);
-                try {
-                    BlockedNumber blockedNumber = new BlockedNumber(type, countryCode, phoneNumber);
-                    configActivity.addNumber(blockedNumber);
-                    Log.i(LOG_TAG, String.format("Added valid number: %s", blockedNumber));
-                } catch (IllegalArgumentException e) {
-                    Log.i(LOG_TAG, String.format("Tried to add invalid number: %s", phoneNumber));
-                    Toast.makeText(configActivity, "Invalid number", Toast.LENGTH_SHORT).show();
-                }
-            })
-            .setNegativeButton("Cancel", (dialog, id) -> {})
-            .setTitle(args.getString(TITLE));
+                .setPositiveButton("Add", (dialog, id) -> {
+                    String countryCode = countryCodeView.getText().toString();
+                    String phoneNumber = numberView.getText().toString();
+                    BlockedNumberType type = (BlockedNumberType) args.getSerializable(DIALOG_TYPE);
+                    try {
+                        BlockedNumber blockedNumber = new BlockedNumber(type, countryCode, phoneNumber);
+                        configActivity.addNumber(blockedNumber);
+                        Log.i(LOG_TAG, String.format("Added valid number: %s", blockedNumber));
+                    } catch (IllegalArgumentException e) {
+                        Log.i(LOG_TAG, String.format("Tried to add invalid number: %s", phoneNumber));
+                        Toast.makeText(configActivity, "Invalid number", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setNegativeButton("Cancel", (dialog, id) -> {})
+                .setTitle(args.getString(TITLE));
 
         AlertDialog dialog = builder.create();
 

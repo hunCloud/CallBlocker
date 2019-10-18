@@ -1,5 +1,4 @@
 package hungnn.bognmaiit.callblocker.layout;
-
 import android.app.Activity;
 
 import android.view.LayoutInflater;
@@ -10,15 +9,15 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-
-import hungnn.bognmaiit.callblocker.R;
-import hungnn.bognmaiit.callblocker.util.AsyncExecutorUtil;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
+import hungnn.bognmaiit.callblocker.R;
+import hungnn.bognmaiit.callblocker.util.AsyncExecutorUtil;
 
 public class CountryListAdapter extends BaseAdapter {
     private final Activity activity;

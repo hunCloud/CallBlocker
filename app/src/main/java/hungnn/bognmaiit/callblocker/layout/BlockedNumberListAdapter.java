@@ -16,11 +16,11 @@ import androidx.recyclerview.widget.SortedList;
 import androidx.recyclerview.widget.SortedListAdapterCallback;
 
 
+import java.util.Collection;
+
 import hungnn.bognmaiit.callblocker.R;
 import hungnn.bognmaiit.callblocker.activity.ConfigurationActivity;
 import hungnn.bognmaiit.callblocker.blockednumber.BlockedNumber;
-
-import java.util.Collection;
 
 public class BlockedNumberListAdapter extends RecyclerView.Adapter<BlockedNumberListAdapter.BlockedNumberViewHolder> {
     private final ConfigurationActivity parentActivity;
@@ -143,3 +143,4 @@ public class BlockedNumberListAdapter extends RecyclerView.Adapter<BlockedNumber
         return blockedNumbers.size();
     }
 }
+

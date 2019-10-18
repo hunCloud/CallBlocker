@@ -1,7 +1,5 @@
 package hungnn.bognmaiit.callblocker.blockednumber;
 
-
-
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;

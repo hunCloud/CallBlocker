@@ -15,8 +15,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
+
 import androidx.recyclerview.widget.RecyclerView;
 
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 import hungnn.bognmaiit.callblocker.R;
 import hungnn.bognmaiit.callblocker.blockednumber.BlockedNumber;
@@ -27,9 +32,6 @@ import hungnn.bognmaiit.callblocker.layout.AddNumberDialogFragment;
 import hungnn.bognmaiit.callblocker.layout.BlockedNumberListAdapter;
 import hungnn.bognmaiit.callblocker.util.AsyncExecutorUtil;
 import hungnn.bognmaiit.callblocker.util.PermissionsUtil;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import java.util.List;
 
 public class ConfigurationActivity extends AppCompatActivity {
     private final String LOG_TAG = ConfigurationActivity.class.getSimpleName();

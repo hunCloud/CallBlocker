@@ -1,5 +1,6 @@
 package hungnn.bognmaiit.callblocker.blockednumber;
 
+
 public enum BlockedNumberType {
     EXACT_MATCH("Exact match"),
     REGEX_MATCH("Prefix match");

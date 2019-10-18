@@ -1,5 +1,4 @@
 package hungnn.bognmaiit.callblocker.activity;
-
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 
@@ -10,9 +9,9 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import hungnn.bognmaiit.callblocker.R;
 import hungnn.bognmaiit.callblocker.util.PermissionsUtil;
+
 
 public class RequestPermissionsActivity extends AppCompatActivity {
     private static final String LOG_TAG = RequestPermissionsActivity.class.getSimpleName();
